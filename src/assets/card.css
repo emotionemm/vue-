@@ -1,0 +1,33 @@
+.time {
+	font-size: 13px;
+	color: #999;
+}
+.bottom {
+	margin-top: 13px;
+	line-height: 12px;
+}
+.button {
+	padding: 0;
+	float: right;
+}
+.bookImg{
+	height:12rem;
+	width:16rem;
+	margin:auto auto;
+	padding:5px 0px;
+}
+.image {
+	height:100%;
+	width:100%;
+	object-fit:contain;
+	margin:auto auto;
+	display: block;
+}
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both
+}

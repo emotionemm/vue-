@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="../src/assets/Nav_bar.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+		 crossorigin="anonymous" />
+		<title>
+			<%= htmlWebpackPlugin.options.title %>
+		</title>
+	</head>
+	<body>
+		<div id="app">
+		</div>
+		<!-- built files will be auto injected -->
+	</body>
+	<script>
+		function myCount_over() {
+			let dt1_icon = document.getElementsByClassName('mdui-icon material-icons')[0];
+			let dt_layer = document.getElementsByClassName('dt_layer')[0];
+			let dt2 = document.getElementsByClassName('dt')[2];
+			dt2.setAttribute('id', 'dt1');
+			dt1_icon.setAttribute('id', 'dt1_icon');
+			dt_layer.style.display = 'block';
+		};
+
+		function myCount_leave() {
+			let dt1_icon = document.getElementsByClassName('mdui-icon material-icons')[0];
+			let dt_layer = document.getElementsByClassName('dt_layer')[0];
+			let dt2 = document.getElementsByClassName('dt')[2];
+			dt2.removeAttribute('id');
+			dt1_icon.removeAttribute('id');
+			dt_layer.style.display = 'none';
+		};
+
+		function mouse_over(num) {
+			let list = document.getElementsByClassName('category_listnone')[num];
+			let list_one_act = document.getElementsByClassName('list_one_act')[0];
+			let icno = document.getElementsByClassName('mdui-icon material-icons')[2];
+			icno.setAttribute('id', 'header_three_i3_over');
+			list_one_act.style.display = 'block';
+			list.setAttribute('id', 'category_listHover');
+		};
+
+		function mouse_leave(num) {
+			let list = document.getElementsByClassName('category_listnone')[num];
+			let list_one_act = document.getElementsByClassName('list_one_act')[0];
+			let icno = document.getElementsByClassName('mdui-icon material-icons')[2];
+			icno.setAttribute('id', 'header_three_i3_leave');
+			list_one_act.style.display = 'none';
+			list.removeAttribute('id');
+		};
+	</script>
+</html>
